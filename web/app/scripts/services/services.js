@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('verdantApp', ['toaster'])
+angular.module('verdantService', ['toaster'])
 
 .factory('ParseSDK', function($location, $route, toaster) {
 

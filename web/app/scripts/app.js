@@ -8,23 +8,19 @@ var verdantApp = angular.module('verdantApp', [
 	'toaster',
 	//'verdantApp.directives',
 	//'verdantApp.filters',
-	'verdantApp.services'
+	'verdantService'
 ]);
 
 verdantApp.config(function($routeProvider) {
 
 	$routeProvider.when('/', {
 		templateUrl: 'app/scripts/views/home.html',
-		controller: 'home'
-	});
-
-	$routeProvider.otherwise({
-		redirectTo: '/'
+		controller: 'HomeController'
 	});
 
 });
 
-verdantApp.run(['ParseSDK', 'location', function(services, $location) {
+verdantApp.run(['ParseSDK', '$location', function(verdantService, $location) {
 
 	// getconfig
 

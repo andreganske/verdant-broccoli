@@ -2,13 +2,13 @@
 
 angular.module('verdantApp')
 
-.controller('home', ['$scope', function($scope) {
+.controller('HomeController', ['$scope', function($scope) {
 
 	// login page actions
 
 	// track login
 	var dimensions = {
-  		date: new Date(),
+  		date: new Date().toString(),
   		type: 'web'
 	};
 	
