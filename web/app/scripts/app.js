@@ -6,7 +6,7 @@ var verdantApp = angular.module('verdantApp', [
 	'ui.mask',
 	'ui.bootstrap',
 	'toaster',
-	//'verdantApp.directives',
+	'verdantApp.directives',
 	//'verdantApp.filters',
 	'verdantService'
 ]);
