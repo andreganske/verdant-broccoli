@@ -1,0 +1,49 @@
+<template name="join">
+	
+	<div class="page auth">
+		<nav>
+			<div class="nav-group">
+				<a href="#" class="js-menu nav-item">
+					<span class="icon-list-unordered"></span>
+				</a>
+			</div>
+		</nav>
+
+		<div class="content-scrollable">
+			<div class="wrapper-auth">
+				<h1 class="title-auth">Quero me cadastrar!</h1>
+				<p class="subtitle-auth">Cadastre-se agora e controle melhor suas contas!</p>
+
+				<form>
+					{{#if errorMessages}}
+						<div>
+							{{#each errorMessages}}
+								<div class="list-item">{{this}}</div>
+							{{/each}} 
+						</div>
+					{{/if}}
+
+					<div class="input-symbol {{errorClass'email'}}">
+						<input type="email" name="email" placeholder="Seu email" />
+						<span class="icon-email" title="Seu email"></span>
+					</div>
+
+					<div class="input-symbol {{errorClass'password'}}">
+						<input type="password" name="password" placeholder="Sua senha" />
+						<span class="icon-lock" title="Sua senha"></span>
+					</div>
+
+					<div class="input-symbol {{errorClass'confirm'}}">
+						<input type="password" name="confirm" placeholder="Confirme sua senha" />
+						<span class="icon-lock" title="Confirme sua senha"></span>
+					</div>
+
+					<button type="submit" class="btn-primary">Começar agora!</button>
+				</form>
+			</div>
+
+			<a href="{{pathFor 'signin'}}" class="link-auth-alt">Já é cadastrado? Entre aqui!</a>
+
+		</div>
+	</div>
+</template>

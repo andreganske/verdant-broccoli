@@ -1,0 +1,17 @@
+<!-- define a template for accountList -->
+
+<template name="accountList">
+	
+	<p>Your accounts</p>
+
+	<div class="ui horizontal list">
+		
+		{{> addAccount}}
+	
+		{{#each accounts}}
+			{{> account}}
+		{{/each}}
+		
+	</div>
+
+</template>

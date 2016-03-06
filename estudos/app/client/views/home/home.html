@@ -1,0 +1,19 @@
+<template name="home">
+
+	{{#if currentUser}}	
+		<nav class="ui text menu">
+			<div class="ui item">
+				<h1 class="header">Verdant Broccoli</h1>
+			</div>
+
+			<div class="ui item">
+				{{> loginButtons}}
+			</div>
+		</nav>
+
+		{{> accountList}}
+	{{else}}
+		{{> landingPage}}
+	{{/if}}
+
+</template>
